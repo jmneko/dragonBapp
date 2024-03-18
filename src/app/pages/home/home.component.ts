@@ -3,10 +3,10 @@ import { DragonballService } from 'src/app/services/dragonball.service';
 
 @Component({
   selector: 'app-personajes',
-  templateUrl: './personajes.component.html',
-  styleUrls: ['./personajes.component.css']
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class PersonajesComponent {
+export class HomeComponent {
 
   personajes: any[] = [];
   currentPage = 1;
