@@ -4,12 +4,17 @@ import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './pages/home/home.component';
+import { PersonajesComponent } from './pages/personajes/personajes.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { PlanetasComponent } from './pages/planetas/planetas.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+    PersonajesComponent,
+    NavBarComponent,
+    PlanetasComponent,
   ],
   imports: [
     BrowserModule,
