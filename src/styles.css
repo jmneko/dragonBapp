@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background-image: url('https://cdn.alfabetajuega.com/alfabetajuega/2020/09/Kaio.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
