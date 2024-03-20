@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+import { Personaje } from 'src/app/interfaces/personaje.interfaces';
 import { DragonballService } from 'src/app/services/dragonball.service';
 
 @Component({
@@ -8,14 +9,11 @@ import { DragonballService } from 'src/app/services/dragonball.service';
 })
 export class PersonajesComponent {
 
-  
-
   personajes: any[] = [];
   currentPage = 1;
   totalPages = 1;
 
   dragonballServices = inject(DragonballService);
-
 
   ngOnInit(): void {
     this.cargaPersonajes();
