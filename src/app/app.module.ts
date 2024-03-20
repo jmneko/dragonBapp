@@ -8,6 +8,7 @@ import { PersonajesComponent } from './pages/personajes/personajes.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { PlanetasComponent } from './pages/planetas/planetas.component';
 import { HomeComponent } from './pages/home/home.component';
+import { VistaPersonajeComponent } from './pages/vista-personaje/vista-personaje.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { HomeComponent } from './pages/home/home.component';
     PersonajesComponent,
     NavBarComponent,
     PlanetasComponent,
-    HomeComponent
+    HomeComponent,
+    VistaPersonajeComponent
   ],
   imports: [
     BrowserModule,
