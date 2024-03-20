@@ -1,12 +1,10 @@
 <h1>PLANETAS</h1>
 
-<div *ngFor="let planeta of planetas">
-  <ul>
-    <li>
-      {{planeta.name}}
-      <img [src]="planeta.image" alt="{{planeta.name}}">
-    </li>
-  </ul>
+<div class="listaPlanetas">
+  <div class="planeta" *ngFor="let planeta of planetas">
+    <img [src]="planeta.image" alt="{{planeta.name}}">
+    <span class="nombrePlaneta"> {{planeta.name}} </span>
+  </div>
 </div>
 
 <div>

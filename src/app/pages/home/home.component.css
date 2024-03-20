@@ -23,17 +23,32 @@
   justify-content: center;
 }
 
+a {
+  overflow: hidden;
+} 
+a:hover {
+  border-radius: 3%;
+  animation:shadow-drop-center 0.3s linear both}
+  @keyframes shadow-drop-center{0%{box-shadow:0 0 0 0 transparent}100%
+  {box-shadow:0 0 20px 0 rgb(255, 230, 0)}
+}
+
 .imgPersonajes, .imgPlanetas {
   width: 100%;
   height: auto;
   flex-basis: 40%;
   border: 1px solid rgba(255, 0, 4, 0.721);
   border-radius: 3%;
+  filter: grayscale(60%);
+  transition: filter 0.5s ease;
+  transition: scale 0.5s ease-in-out, filter 0.5s ease-in-out;
 }
-.imgPersonajes:hover, .imgPlanetas:hover{
-  animation:shadow-drop-center 0.3s linear both}
-  @keyframes shadow-drop-center{0%{box-shadow:0 0 0 0 transparent}100%
-  {box-shadow:0 0 20px 0 rgb(255, 230, 0)}}
+.imgPersonajes:hover, .imgPlanetas:hover {
+  filter: grayscale(0%);
+  scale: 1.1; 
+}
+
+
 
 .tituloPersonajes, .tituloPlanetas {
   font-size: 55px;

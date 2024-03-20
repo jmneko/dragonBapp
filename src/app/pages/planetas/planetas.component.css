@@ -1,0 +1,40 @@
+
+.listaPlanetas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.planeta {
+  position: relative;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  width: 300px; /* ancho de cada planeta */
+}
+
+  .planeta img {
+  width: 100%; /* la imagen ocupa el 100% del contenedor (planeta) */
+  height: auto;
+  transform: filter 0.3s;
+}
+  .planeta:hover img {
+  filter: sepia(100%);
+}
+
+.nombrePlaneta {
+  font-size: 2.5rem;
+  color: rgb(255, 0, 0);
+  font-weight: 900;
+  text-align: center; /* Centra el texto horizontalmente */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centra el nombre del planeta tanto vertical como horizontalmente */
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+.planeta:hover .nombrePlaneta {
+  opacity: 1;
+}

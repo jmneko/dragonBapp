@@ -1,16 +1,14 @@
-<h1>Probando cosas</h1>
+<h1>PERSONAJES</h1>
 
 
- <div *ngFor="let personaje of personajes">
-  <ul>
-    <li>
-      {{personaje.name}}
+ <div class="listaPersonajes">
+    <div class="personaje"  *ngFor="let personaje of personajes">
+      <span>{{personaje.name}}</span>
       <img [src]="personaje.image" alt="{{personaje.name}}">
-    </li>
-  </ul>
+    </div>
  </div>
 
-
+<!-- Paginacion -->
 <div>
   <button (click)="previousPage()" [disabled]="currentPage === 1">Anterior</button>
   <span> Página {{ currentPage }} de {{ totalPages }} </span>
