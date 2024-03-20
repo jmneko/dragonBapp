@@ -8,10 +8,11 @@
 .personaje {
   text-align: center;
   margin-bottom: 3%;
-  margin-top: 5%;
+  margin-top: 5%; 
 }
 
 img {
   width: auto;
   height: 475px;
+  filter:drop-shadow(10px -5px 7px rgb(42, 42, 42));
 }
