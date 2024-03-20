@@ -1,1 +1,16 @@
-<p>planetas works!</p>
+<h1>PLANETAS</h1>
+
+<div *ngFor="let planeta of planetas">
+  <ul>
+    <li>
+      {{planeta.name}}
+      <img [src]="planeta.image" alt="{{planeta.name}}">
+    </li>
+  </ul>
+</div>
+
+<div>
+  <button (click)="previousPage()" [disabled]="currentPage === 1">Anterior</button> 
+  <span> Pagina {{ currentPage }} de {{ totalPages }} </span>
+  <button (click)="nextPage()" [disabled]="currentPage === totalPages">Siguiente</button>
+</div>
