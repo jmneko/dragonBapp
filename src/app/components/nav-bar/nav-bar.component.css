@@ -1,0 +1,17 @@
+ul {
+  list-style: none;
+  display: flex; 
+  justify-content: end;
+  gap: 2%;
+  margin-right: 3%;
+  font-size: 18px;
+}
+
+li a {
+  text-decoration: none;
+  color: rgb(250, 229, 0);
+}
+li:hover a:hover {
+  text-decoration: underline;
+  color: rgb(251, 255, 0);
+}
