@@ -22,7 +22,6 @@ export class VistaPersonajeComponent {
       let id = String(params.idpersonaje);
       this.personajeSolo = this.personajesServices.getPersonajeId(id).subscribe((response) => {
         this.personajeSolo = response;
-        console.log(response)
       })
     })
   }

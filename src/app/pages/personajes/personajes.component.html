@@ -4,7 +4,7 @@
  <div class="listaPersonajes">
     <div class="personaje"  *ngFor="let personaje of personajes">
       <span>{{personaje.name}}</span>
-      <img [src]="personaje.image" alt="{{personaje.name}}">
+      <img [src]="personaje.image" alt="{{personaje.name}}" [routerLink]="['/personajes', personaje.id]">
     </div>
  </div>
 
