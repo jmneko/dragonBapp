@@ -1,4 +1,4 @@
-import { Component, Input, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Personaje } from 'src/app/interfaces/personaje.interfaces';
 import { DragonballService } from 'src/app/services/dragonball.service';
@@ -10,8 +10,8 @@ import { DragonballService } from 'src/app/services/dragonball.service';
 })
 export class VistaPersonajeComponent {
 
-  @Input() personajeActual: Personaje | any;
   personajeSolo: Personaje | any;
+  datos: Personaje[] = [];
 
   activatedRoute = inject(ActivatedRoute);
   personajesServices = inject(DragonballService);
@@ -22,6 +22,7 @@ export class VistaPersonajeComponent {
       let id = String(params.idpersonaje);
       this.personajeSolo = this.personajesServices.getPersonajeId(id).subscribe((response) => {
         this.personajeSolo = response;
+        this.datos = [response];
       })
     })
   }
