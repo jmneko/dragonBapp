@@ -2,7 +2,7 @@
 /* Logo dragonBall */
 .cabecera {
   text-align: center;
-  margin-bottom: 7%;
+  margin-bottom: 5%;
 }
 
 .imgCabecera {
@@ -53,8 +53,9 @@ a:hover {
 
 .tituloPersonajes, .tituloPlanetas {
   font-size: 55px;
-  width: 900;
-  color: rgb(250, 229, 0);
+  font-weight: 900;
+  color: rgb(255, 234, 0);
+  text-shadow: -2px -2px 0 rgb(0, 0, 0), 2px -2px 0 rgb(0, 0, 0), -2px 2px 0 rgb(0, 0, 0), 2px 2px 0 rgb(0, 0, 0);
 }
 
 

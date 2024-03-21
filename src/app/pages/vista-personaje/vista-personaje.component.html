@@ -1,3 +1,46 @@
-<p *ngFor="let dato of datos">
-  
-</p>
+<div *ngFor="let dato of datos">
+
+  <h1> {{dato.name}} </h1>
+  <div class="contenedorPrincipal">
+    <img class="personajeEntero" src="{{dato.image}}" alt="dibujo {{dato.name}}">
+    <div class="datosCaja">
+      <div>
+        <p class="encabezadoDatos">Nombre</p>
+        <p class="datosFinal"> {{dato.name}} </p>
+      </div>
+
+      <div>
+        <p class="encabezadoDatos">Ki</p>
+        <p class="datosFinal"> {{dato.ki}} </p>   
+      </div>
+
+      <div>
+        <p class="encabezadoDatos">maximo Ki</p>
+        <p class="datosFinal"> {{dato.maxKi}} </p>
+      </div>
+
+      <div>
+        <p class="encabezadoDatos">Raza</p>
+        <p class="datosFinal"> {{dato.race}} </p>
+      </div>
+
+      <div>
+        <p class="encabezadoDatos">sexo</p>
+        <p class="datosFinal"> {{dato.gender}} </p>
+      </div>
+
+      <div>
+        <p class="encabezadoDatos">Descripcion</p>
+        <p class="datosFinal"> {{dato.description}} </p>
+      </div>
+
+      <div>
+        <p class="encabezadoDatos">Planeta</p>
+        <p class="datosFinal"> {{dato.originPlanet}} </p>
+      </div>
+
+    </div>
+  </div>
+
+
+</div>
