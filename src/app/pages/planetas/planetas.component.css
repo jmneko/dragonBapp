@@ -3,13 +3,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center;
+  align-items: start;
 }
 
 .planeta {
   position: relative;
   margin-bottom: 5%;
   margin-top: 5%;
+  margin: 2%;
   width: 300px; /* ancho de cada planeta */
 }
 
