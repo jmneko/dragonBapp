@@ -9,6 +9,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { PlanetasComponent } from './pages/planetas/planetas.component';
 import { HomeComponent } from './pages/home/home.component';
 import { VistaPersonajeComponent } from './pages/vista-personaje/vista-personaje.component';
+import { VistaPlanetasComponent } from './pages/vista-planetas/vista-planetas.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { VistaPersonajeComponent } from './pages/vista-personaje/vista-personaje
     NavBarComponent,
     PlanetasComponent,
     HomeComponent,
-    VistaPersonajeComponent
+    VistaPersonajeComponent,
+    VistaPlanetasComponent
   ],
   imports: [
     BrowserModule,
