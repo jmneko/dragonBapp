@@ -1,5 +1,25 @@
-<h1>PLANETAS</h1>
+<div *ngFor="let planeta of datosPlaneta">
+  <h1> {{planeta.name}} </h1>
+  <div class="contenedorPrincipal">
+    <img class="imgPlaneta" src="{{planeta.image}}" alt="{{planeta.name}}">
+    <div class="datosCaja">
 
-<div>
-  
+      <div>
+        <p class="encabezadoDatos">Nombre</p>
+        <p class="datosFinal"> {{planeta.name}} </p>
+      </div>
+
+      <div>
+        <p class="encabezadoDatos">Descripcion</p>
+        <p class="datosFinal"> {{planeta.description}} </p>
+      </div>
+
+      <div>
+        <p class="encabezadoDatos">Destruido</p>
+        <p class="datosFinal"> {{planeta.isDestroyed}} </p>
+      </div>
+
+    </div>
+  </div>
+
 </div>

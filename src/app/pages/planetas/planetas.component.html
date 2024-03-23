@@ -2,7 +2,7 @@
 
 <div class="listaPlanetas">
   <div class="planeta" *ngFor="let planeta of planetas">
-    <img [src]="planeta.image" alt="{{planeta.name}}">
+    <img [src]="planeta.image" alt="{{planeta.name}}"  [routerLink]="['/planetas', planeta.id]">
     <span class="nombrePlaneta"> {{planeta.name}} </span>
   </div>
 </div>

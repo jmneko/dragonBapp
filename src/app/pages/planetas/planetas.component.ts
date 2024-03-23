@@ -14,6 +14,7 @@ export class PlanetasComponent {
 
   planetasServices = inject(PlanetasService);
 
+
   ngOnInit(): void {
     this.cargaPlanetas()
   };
