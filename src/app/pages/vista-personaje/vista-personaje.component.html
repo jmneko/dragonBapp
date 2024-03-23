@@ -37,7 +37,7 @@
       <div>
         <p class="encabezadoDatos">Planeta</p>
         <p class="datosFinal"> {{personajeSolo.originPlanet.name}} </p>
-        <img class="imgPlaneta" src="{{personajeSolo.originPlanet.image}}" alt="{{personajeSolo.originPlanet.name}}"  [routerLink]="['/planetas', dato.id]">
+        <img class="imgPlaneta" src="{{personajeSolo.originPlanet.image}}" alt="{{personajeSolo.originPlanet.name}}"  [routerLink]="['/planetas', personajeSolo.originPlanet.id]">
       </div>
     </div>
 

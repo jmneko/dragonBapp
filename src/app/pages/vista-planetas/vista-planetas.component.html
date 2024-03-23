@@ -14,12 +14,23 @@
         <p class="datosFinal"> {{planeta.description}} </p>
       </div>
 
-      <div>
-        <p class="encabezadoDatos">Destruido</p>
-        <p class="datosFinal"> {{planeta.isDestroyed}} </p>
+      <div *ngIf="planeta.isDestroyed">
+        <p class="encabezadoDatosDestroyed">¡¡¡ Está destruido !!!</p>
       </div>
-
     </div>
   </div>
 
+  <p class="tituloPersonajes">Personajes de este planeta</p>
+  <div class="nombrePersonajes">
+    <div class="cajaNombres">
+      <div *ngFor="let personaje of unPlaneta?.characters">
+        <p class="pNombre" [routerLink]="['/personajes', personaje.id]">{{personaje.name}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="cajaPersonajes">
+    <div *ngFor="let personaje of unPlaneta?.characters">
+      <img class="imgPersonaje" src="{{personaje.image}}" alt="{{personaje.name}}">
+    </div>
+  </div>
 </div>

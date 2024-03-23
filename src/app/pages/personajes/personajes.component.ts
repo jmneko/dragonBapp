@@ -1,5 +1,4 @@
 import { Component, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { Personaje } from 'src/app/interfaces/personaje.interfaces';
 import { DragonballService } from 'src/app/services/dragonball.service';
 
@@ -11,7 +10,6 @@ import { DragonballService } from 'src/app/services/dragonball.service';
 export class PersonajesComponent {
   
   dragonballServices = inject(DragonballService);
-  activerRoute = inject(ActivatedRoute);
   
   personajes: Personaje[] = [];
   currentPage = 1;
