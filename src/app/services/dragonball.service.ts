@@ -19,7 +19,7 @@ export class DragonballService {
   }
 
   getPersonajeId(id: string): Observable<Personaje> {
-    return this.httpClient.get<Personaje>(`${this.baseUrl}characters/${id}`)
+    return this.httpClient.get<Personaje>(`${this.baseUrl}characters/${id}`);
   }
 
 }
