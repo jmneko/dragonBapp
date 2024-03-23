@@ -26,6 +26,7 @@
 
 a {
   overflow: hidden;
+  border-radius: 3%;
 } 
 a:hover {
   border-radius: 3%;
