@@ -41,3 +41,11 @@ h1 {
   margin-top: -20px;;
 }
 
+.imgPlaneta {
+  width: 25%;
+  height: auto;
+}
+.imgPlaneta:hover {
+  cursor: pointer;
+}
+
