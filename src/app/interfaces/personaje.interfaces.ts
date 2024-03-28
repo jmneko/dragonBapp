@@ -12,4 +12,5 @@ export interface Personaje {
   affiliation: string,
   deletedAt?: null,
   originPlanet: Planeta[];
+  transformations: Personaje[];
 }

@@ -2,16 +2,16 @@
 
   <h1> {{dato.name}} </h1>
   <div class="contenedorPrincipal">
-    <img class="personajeEntero" src="{{dato.image}}" alt="dibujo {{dato.name}}">
+    <img class="personajeEntero" src="{{personajeSolo.image}}" alt="dibujo {{dato.name}}">
     <div class="datosCaja">
       <div>
         <p class="encabezadoDatos">Nombre</p>
-        <p class="datosFinal"> {{dato.name}} </p>
+        <p class="datosFinal"> {{personajeSolo.name}} </p>
       </div>
 
       <div>
         <p class="encabezadoDatos">Ki</p>
-        <p class="datosFinal"> {{dato.ki}} </p>   
+        <p class="datosFinal"> {{personajeSolo.ki}} </p>   
       </div>
 
       <div>
@@ -40,6 +40,7 @@
         <img class="imgPlaneta" src="{{personajeSolo.originPlanet.image}}" alt="{{personajeSolo.originPlanet.name}}"  [routerLink]="['/planetas', personajeSolo.originPlanet.id]">
       </div>
     </div>
-
-
+    <div *ngFor="let transformacion of transformaciones; let i = index">
+      <button class="btn btn-danger" (click)="cambiarDatos(i)"> {{transformacion.name}} </button>
+    </div>
 </div>

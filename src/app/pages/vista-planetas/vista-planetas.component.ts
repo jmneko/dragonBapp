@@ -13,6 +13,7 @@ export class VistaPlanetasComponent {
   
   unPlaneta: Planeta | any;
   datosPlaneta: Planeta[] = [];
+  personajeHover: string | null = null;
 
   activatedRoute = inject(ActivatedRoute);
   planetaServices = inject(PlanetasService);
@@ -27,5 +28,13 @@ export class VistaPlanetasComponent {
       })
     })
   } 
+
+  mostrarImagenPersonaje(nombre: string) {
+    this.personajeHover = nombre;
+  } 
+
+  ocultarImagenPersonaje() {
+    this.personajeHover = null;
+  }
 
 }

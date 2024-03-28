@@ -24,13 +24,19 @@
   <div class="nombrePersonajes">
     <div class="cajaNombres">
       <div *ngFor="let personaje of unPlaneta?.characters">
-        <p class="pNombre" [routerLink]="['/personajes', personaje.id]">{{personaje.name}}</p>
+        <p class="pNombre" 
+          [routerLink]="['/personajes', personaje.id]"
+          (mouseenter)="mostrarImagenPersonaje(personaje.name)"
+          (mouseleave)="ocultarImagenPersonaje()">
+          {{personaje.name}}
+        </p>
       </div>
     </div>
   </div>
-  <div class="cajaPersonajes">
-    <div *ngFor="let personaje of unPlaneta?.characters">
-      <img class="imgPersonaje" src="{{personaje.image}}" alt="{{personaje.name}}">
+    <div class="cajaPersonajes" >
+      <div *ngFor="let personaje of unPlaneta?.characters">
+        <img class="imgPersonaje" src="{{personaje.image}}" alt="{{personaje.name}}">
+      </div>
     </div>
-  </div>
+
 </div>

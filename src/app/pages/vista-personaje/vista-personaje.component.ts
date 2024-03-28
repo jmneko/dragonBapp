@@ -14,6 +14,7 @@ export class VistaPersonajeComponent {
   personajeSolo: Personaje | any;
   datos: Personaje[] = [];
   datosPlaneta: Planeta[] = [];
+  transformaciones: Personaje[] = [];
 
   activatedRoute = inject(ActivatedRoute);
   personajesServices = inject(DragonballService);
@@ -26,8 +27,14 @@ export class VistaPersonajeComponent {
         this.personajeSolo = response;
         this.datos = [response];
         this.datosPlaneta = response.originPlanet;
+        this.transformaciones = response.transformations;
       })
     })
   }
 
+  cambiarDatos(indice: number) {
+    if (this.transformaciones && this.transformaciones[indice]) {
+      this.personajeSolo = this.transformaciones[indice];
+    }
+  }
 }
