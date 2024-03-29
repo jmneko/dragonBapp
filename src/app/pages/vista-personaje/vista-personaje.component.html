@@ -40,7 +40,9 @@
         <img class="imgPlaneta" src="{{personajeSolo.originPlanet.image}}" alt="{{personajeSolo.originPlanet.name}}"  [routerLink]="['/planetas', personajeSolo.originPlanet.id]">
       </div>
     </div>
-    <div *ngFor="let transformacion of transformaciones; let i = index">
-      <button class="btn btn-danger" (click)="cambiarDatos(i)"> {{transformacion.name}} </button>
+    <div class="botones">
+      <div *ngFor="let transformacion of transformaciones; let i = index">
+        <button class="btn btn-danger mb-4" (click)="cambiarDatos(i)"> {{transformacion.name}} </button>
+      </div>
     </div>
 </div>
