@@ -24,7 +24,6 @@ export class VistaPlanetasComponent {
       this.unPlaneta = this.planetaServices.getPlanetaId(id).subscribe((response) => {
         this.unPlaneta = response;
         this.datosPlaneta = [response];
-        console.log(this.unPlaneta)
       })
     })
   } 

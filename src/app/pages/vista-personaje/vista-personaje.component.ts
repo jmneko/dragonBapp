@@ -37,4 +37,16 @@ export class VistaPersonajeComponent {
       this.personajeSolo = this.transformaciones[indice];
     }
   }
+
+  resetear() {
+    this.activatedRoute.params.subscribe((params: any) => {
+      let id = String(params.idpersonaje);
+      this.personajeSolo = this.personajesServices.getPersonajeId(id).subscribe((response) => {
+        this.personajeSolo = response;
+        this.datos = [response];
+        this.datosPlaneta = response.originPlanet;
+        this.transformaciones = response.transformations;
+      })
+    })
+  }
 }

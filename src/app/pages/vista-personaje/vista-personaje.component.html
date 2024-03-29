@@ -44,5 +44,6 @@
       <div *ngFor="let transformacion of transformaciones; let i = index">
         <button class="btn btn-danger mb-4" (click)="cambiarDatos(i)"> {{transformacion.name}} </button>
       </div>
+      <button class="btn btn-danger" (click)="resetear()">Personaje original</button>
     </div>
 </div>
