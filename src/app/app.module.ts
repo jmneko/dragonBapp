@@ -10,6 +10,7 @@ import { PlanetasComponent } from './pages/planetas/planetas.component';
 import { HomeComponent } from './pages/home/home.component';
 import { VistaPersonajeComponent } from './pages/vista-personaje/vista-personaje.component';
 import { VistaPlanetasComponent } from './pages/vista-planetas/vista-planetas.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { VistaPlanetasComponent } from './pages/vista-planetas/vista-planetas.co
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

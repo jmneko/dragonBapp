@@ -14,6 +14,7 @@ export class PersonajesComponent {
   personajes: Personaje[] = [];
   currentPage = 1;
   totalPages = 1;
+  filtro: {race?: string, affiliation?: string, name?: string, gender?: string} = {};
   
 
   ngOnInit(): void {
@@ -38,6 +39,12 @@ export class PersonajesComponent {
     if(this.currentPage > 1) {
       this.cargaPersonajes(this.currentPage -1)
     }
+  }
+
+  buscarPersonajes() {
+    this.dragonballServices.filtrarPersonajes(this.filtro).subscribe((personajes) => {
+      this.personajes = personajes;
+    })
   }
 
 }

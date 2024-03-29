@@ -1,5 +1,22 @@
 <h1>PERSONAJES</h1>
 
+<div>
+  <label for="race">Raza:</label>
+  <input type="text" id="race" [(ngModel)]="filtro.race">
+
+  <label for="affiliation">Afiliación:</label>
+  <input type="text" id="affiliation" [(ngModel)]="filtro.affiliation">
+
+  <label for="gender">Genero:</label>
+  <input type="text" id="gender" [(ngModel)]="filtro.gender">
+
+  <label for="name">Nombre:</label>
+  <input type="text" id="name" [(ngModel)]="filtro.name">
+
+
+  <button (click)="buscarPersonajes()">Buscar</button>
+</div>
+
 
  <div class="listaPersonajes">
     <div class="personaje"  *ngFor="let personaje of personajes">

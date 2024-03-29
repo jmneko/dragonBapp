@@ -22,4 +22,8 @@ export class DragonballService {
     return this.httpClient.get<Personaje>(`${this.baseUrl}characters/${id}`);
   }
 
+  filtrarPersonajes(filtrar: {race?: string, affiliation?: string, name?: string, gender?: string}): Observable<Personaje[]> {
+    return this.httpClient.get<Personaje[]>(`${this.baseUrl}characters/`, {params: filtrar});
+  }
+
 }

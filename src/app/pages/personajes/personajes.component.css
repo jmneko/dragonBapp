@@ -1,3 +1,11 @@
+h1 {
+  margin-bottom: 5%;
+  font-size: 150px;
+  text-align: center;
+  font-weight: 900;
+  color: rgb(255, 234, 0);
+  text-shadow: -2px -2px 0 rgb(0, 0, 0), 2px -2px 0 rgb(0, 0, 0), -2px 2px 0 rgb(0, 0, 0), 2px 2px 0 rgb(0, 0, 0);
+}
 
 .listaPersonajes {
   display: flex;
