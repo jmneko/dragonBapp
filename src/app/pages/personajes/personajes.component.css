@@ -17,6 +17,10 @@ h1 {
   flex-direction: column;
 }
 
+.accordion-item{
+  background-color: antiquewhite;
+}
+
 .accordion-button {
   display: flex;
   flex-wrap: nowrap;

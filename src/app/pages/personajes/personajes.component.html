@@ -10,7 +10,7 @@
       </h2>
       <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="filtroAcordeon">
         <div class="accordion-body">
-          <label for="race">Raza:</label>
+          <label for="race">Raza</label>
           <select id="race" [(ngModel)]="filtro.race">
             <option value="Human" >Humano</option>
             <option value="Saiyan">Saiyan</option>
@@ -27,7 +27,7 @@
             <option value="Unknown">Desconocido</option>
           </select>
 
-          <label for="affiliation">Afiliación:</label>
+          <label for="affiliation">Afiliación</label>
           <select id="affiliation" [(ngModel)]="filtro.affiliation">
             <option value="Z Fighter">Guerreros Z</option>
             <option value="Red Ribbon Army">Ejercito Red Ribbon(RR)</option>
@@ -42,18 +42,19 @@
             <option value="Other">otra</option>
           </select>
 
-          <label for="gender">Genero:</label>
+          <label for="gender">Genero</label>
           <select id="gender" [(ngModel)]="filtro.gender">
             <option value="Male">Hombre</option>
             <option value="Female">Mujer</option>
             <option value="Unknown">Desconocido</option>
           </select>
 
-          <label for="name">Nombre:</label>
+          <label for="name">Nombre</label>
           <input type="text" id="name" [(ngModel)]="filtro.name">
-
-          <button class="btn-buscar" (click)="buscarPersonajes()">Buscar</button>
-          <button class="btn-borrar" (click)="BorrarFiltro()">Restaurar filtro</button>
+          <div class="btn-filtro">
+            <button class="btn-buscar" (click)="buscarPersonajes()">Buscar</button>
+            <button class="btn-borrar" (click)="BorrarFiltro()">Restaurar filtro</button>
+          </div>
         </div>
       </div>
     </div>
