@@ -1,10 +1,43 @@
 h1 {
-  margin-bottom: 5%;
+  margin-bottom: 2%;
   font-size: 150px;
   text-align: center;
   font-weight: 900;
   color: rgb(255, 234, 0);
   text-shadow: -2px -2px 0 rgb(0, 0, 0), 2px -2px 0 rgb(0, 0, 0), -2px 2px 0 rgb(0, 0, 0), 2px 2px 0 rgb(0, 0, 0);
+}
+
+.accordion {
+  width: 40%;
+  margin-bottom: 5%;
+}
+
+.accordion-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-button {
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+}
+
+label {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 900;
+  color: rgb(255, 234, 0);
+  text-shadow: -2px -2px 0 rgb(0, 0, 0), 2px -2px 0 rgb(0, 0, 0), -2px 2px 0 rgb(0, 0, 0), 2px 2px 0 rgb(0, 0, 0);
+}
+
+input {
+  margin-bottom: 4%;
+}
+
+.btn-buscar {
+  margin-top: 3%;
+  width: 20%;
 }
 
 .listaPersonajes {

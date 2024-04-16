@@ -1,29 +1,71 @@
 <h1>PERSONAJES</h1>
+<div class="container d-flex justify-content-center align-items-center ">
+  <div class="accordion" id="filtroAcordeon">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+          aria-expanded="false" aria-controls="collapseOne">
+          Filtrar
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="filtroAcordeon">
+        <div class="accordion-body">
+          <label for="race">Raza:</label>
+          <select id="race" [(ngModel)]="filtro.race">
+            <option value="Human" >Humano</option>
+            <option value="Saiyan">Saiyan</option>
+            <option value="Namekian">Namekiano</option>
+            <option value="Majin">Genio</option>
+            <option value="Frieza Race">Raza Frieza</option>
+            <option value="Android">Androide</option>
+            <option value="Jiren Race">Raza de Jiren</option>
+            <option value="God">Dios</option>
+            <option value="Angel">Angel</option>
+            <option value="Evil">Demonio</option>
+            <option value="Nucleico">Nucleico</option>
+            <option value="Nucleico benigno">Nucleico benigno</option>
+            <option value="Unknown">Desconocido</option>
+          </select>
 
-<div>
-  <label for="race">Raza:</label>
-  <input type="text" id="race" [(ngModel)]="filtro.race">
+          <label for="affiliation">Afiliación:</label>
+          <select id="affiliation" [(ngModel)]="filtro.affiliation">
+            <option value="Z Fighter">Guerreros Z</option>
+            <option value="Red Ribbon Army">Ejercito Red Ribbon(RR)</option>
+            <option value="Namekian Warrior">Guerreros namekianos</option>
+            <option value="Freelancer">Independientes</option>
+            <option value="Army of Frieza">Ejercito de Freezer</option>
+            <option value="Pride Troopers">Tropas del orgullo</option>
+            <option value="Assistant of Vermoud">Asistentes de Vermoud</option>
+            <option value="God">Dios</option>
+            <option value="Assistant of Beerus">Asistente de Beerus</option>
+            <option value="Villain">Villanos</option>
+            <option value="Other">otra</option>
+          </select>
 
-  <label for="affiliation">Afiliación:</label>
-  <input type="text" id="affiliation" [(ngModel)]="filtro.affiliation">
+          <label for="gender">Genero:</label>
+          <select id="gender" [(ngModel)]="filtro.gender">
+            <option value="Male">Hombre</option>
+            <option value="Female">Mujer</option>
+            <option value="Unknown">Desconocido</option>
+          </select>
 
-  <label for="gender">Genero:</label>
-  <input type="text" id="gender" [(ngModel)]="filtro.gender">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" [(ngModel)]="filtro.name">
 
-  <label for="name">Nombre:</label>
-  <input type="text" id="name" [(ngModel)]="filtro.name">
-
-
-  <button (click)="buscarPersonajes()">Buscar</button>
+          <button class="btn-buscar" (click)="buscarPersonajes()">Buscar</button>
+          <button class="btn-borrar" (click)="BorrarFiltro()">Restaurar filtro</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-
- <div class="listaPersonajes">
-    <div class="personaje"  *ngFor="let personaje of personajes">
-      <span class="nombrePersonaje">{{personaje.name}}</span>
-      <img [src]="personaje.image" alt="{{personaje.name}}" [routerLink]="['/personajes', personaje.id]">
-    </div>
- </div>
+<div class="listaPersonajes">
+  <div class="personaje" *ngFor="let personaje of personajes">
+    <span class="nombrePersonaje">{{personaje.name}}</span>
+    <img [src]="personaje.image" alt="{{personaje.name}}" [routerLink]="['/personajes', personaje.id]">
+  </div>
+</div>
 
 <!-- Paginacion -->
 <div>

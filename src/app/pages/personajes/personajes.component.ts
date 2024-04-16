@@ -47,4 +47,8 @@ export class PersonajesComponent {
     })
   }
 
+  BorrarFiltro() {
+    this.filtro = {};
+    this.cargaPersonajes();
+  }
 }
