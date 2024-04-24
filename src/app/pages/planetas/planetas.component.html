@@ -1,5 +1,36 @@
 <h1>PLANETAS</h1>
 
+<div class="container d-flex justify-content-center align-items-center ">
+  <div class="accordion" id="filtroAcordeon">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+          aria-expanded="false" aria-controls="collapseOne">
+          Filtrar planetas
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="filtroAcordeon">
+        <div class="accordion-body">
+          
+          <label for="name">Nombre</label>
+          <input type="text" id="name" [(ngModel)]="filtro.name">
+
+          <label for="isDestroyed">Destruido</label>
+          <select id="isDestroyed" [(ngModel)]="filtro.isDestroyed">
+            <option value="true">Si</option>
+            <option value="False">No</option>
+          </select>
+          
+          <div class="btn-filtro">
+            <button class="btn-buscar" (click)="buscarPlanetas()">Buscar</button>
+            <button class="btn-borrar" (click)="BorrarFiltro()">Restaurar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="listaPlanetas">
   <div class="planeta" *ngFor="let planeta of planetas">
     <img [src]="planeta.image" alt="{{planeta.name}}"  [routerLink]="['/planetas', planeta.id]">

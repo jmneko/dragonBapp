@@ -11,6 +11,7 @@ export class PlanetasComponent {
   planetas: any[] = [];
   currentPage = 1;
   totalPages = 1;
+  filtro: {name?: string, isDestroyed?: boolean} = {};
 
   planetasServices = inject(PlanetasService);
 
@@ -37,6 +38,17 @@ export class PlanetasComponent {
     if(this.currentPage > 1) {
       this.cargaPlanetas(this.currentPage - 1)
     }
+  }
+
+  buscarPlanetas() {
+    this.planetasServices.filtrarPlanetas(this.filtro).subscribe((planetas) => {
+      this.planetas = planetas;
+    })
+  }
+
+  BorrarFiltro() {
+    this.filtro = {};
+    this.cargaPlanetas();
   }
 
 }

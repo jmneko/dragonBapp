@@ -22,5 +22,9 @@ export class PlanetasService {
     return this.httpClient.get<Planeta>(`${this.baseUrl}planets/${id}`);
   }
 
+  filtrarPlanetas(filtrar: {name?: string, isDestroyed?: boolean}): Observable<Planeta[]> {
+    return this.httpClient.get<Planeta[]>(`${this.baseUrl}planets/`, {params: filtrar});
+  }
+
 
 }
