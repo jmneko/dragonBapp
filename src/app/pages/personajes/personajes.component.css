@@ -40,9 +40,19 @@ input {
   margin-bottom: 4%;
 }
 
-.btn-buscar {
-  margin-top: 3%;
-  width: 20%;
+.btn-filtro {
+  display: flex;
+  justify-content: center;
+  margin-top: 4%;
+  gap: 5%;
+}
+
+.btn-buscar, .btn-borrar {
+  width: 6rem;
+}
+
+button, .btn-buscar .btn-borrar {
+  border-radius: 15px;
 }
 
 .listaPersonajes {

@@ -7,6 +7,54 @@ h1 {
   text-shadow: -2px -2px 0 rgb(0, 0, 0), 2px -2px 0 rgb(0, 0, 0), -2px 2px 0 rgb(0, 0, 0), 2px 2px 0 rgb(0, 0, 0);
 }
 
+.accordion {
+  width: 35%;
+  margin-bottom: 5%;
+}
+
+.accordion-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-item{
+  background-color: antiquewhite;
+  width: 70%;
+}
+
+.accordion-button {
+  font-size: 1.5rem;
+  text-align: center;
+  height: 2.5rem;;
+}
+
+label {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 900;
+  color: rgb(255, 234, 0);
+  text-shadow: -2px -2px 0 rgb(0, 0, 0), 2px -2px 0 rgb(0, 0, 0), -2px 2px 0 rgb(0, 0, 0), 2px 2px 0 rgb(0, 0, 0);
+}
+
+input {
+  margin-bottom: 4%;
+}
+
+.btn-filtro {
+  display: flex;
+  justify-content: center;
+  margin-top: 4%;
+  gap: 5%;
+}
+
+.btn-buscar, .btn-borrar {
+  width: 6rem;
+}
+
+button, .btn-buscar .btn-borrar {
+  border-radius: 15px;
+}
+
 
 .listaPlanetas {
   display: flex;
