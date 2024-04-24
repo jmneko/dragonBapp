@@ -49,9 +49,6 @@ input {
 
 .btn-buscar, .btn-borrar {
   width: 6rem;
-}
-
-button, .btn-buscar .btn-borrar {
   border-radius: 15px;
 }
 

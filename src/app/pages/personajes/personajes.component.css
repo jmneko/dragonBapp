@@ -24,7 +24,6 @@ h1 {
 
 .accordion-button {
   font-size: 1.5rem;
-  text-align: center;
   height: 2.5rem;;
 }
 
@@ -49,9 +48,6 @@ input {
 
 .btn-buscar, .btn-borrar {
   width: 6rem;
-}
-
-button, .btn-buscar .btn-borrar {
   border-radius: 15px;
 }
 
