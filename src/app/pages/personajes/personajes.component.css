@@ -93,3 +93,21 @@ img:hover {
 .personaje:hover .nombrePersonaje {
   opacity: 1;
 }
+
+.paginacion {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+}
+
+.paginacion, .span {
+  font-weight: 900;
+  color: rgb(255, 234, 0);
+  text-shadow: -2px -2px 0 rgb(0, 0, 0), 2px -2px 0 rgb(0, 0, 0), -2px 2px 0 rgb(0, 0, 0), 2px 2px 0 rgb(0, 0, 0);
+}
+
+.paginacion button {
+  border-radius: 15px;
+  width: 5%;
+}
