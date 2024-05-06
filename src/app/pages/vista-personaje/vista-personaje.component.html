@@ -6,40 +6,53 @@
       <img class="personajeEntero" src="{{personajeSolo.image}}" alt="dibujo {{dato.name}}">
     </div>
     <div class="datosCaja">
-      <div>
-        <p class="encabezadoDatos">Nombre</p>
-        <p class="datosFinal"> {{personajeSolo.name}} </p>
+      <div class="datosBasicos">
+        <div class="datosPersonales">
+          <div>
+            <p class="encabezadoDatos">Nombre</p>
+            <p class="datosFinal"> {{personajeSolo.name}} </p>
+          </div>
+
+          <div>
+            <p class="encabezadoDatos">Raza</p>
+            <p class="datosFinal"> {{dato.race}} </p>
+          </div>
+
+          <div>
+            <p class="encabezadoDatos">sexo</p>
+            <p class="datosFinal"> {{dato.gender}} </p>
+          </div>
+        </div>
+
+        <div class="datosFuerza">
+          <div>
+            <p class="encabezadoDatos">Ki</p>
+            <p class="datosFinal"> {{personajeSolo.ki}} </p>
+          </div>
+
+          <div>
+            <p class="encabezadoDatos">maximo Ki</p>
+            <p class="datosFinal"> {{dato.maxKi}} </p>
+          </div>
+
+          <div>
+            <p class="encabezadoDatos">Planeta</p>
+        <p class="datosFinal"> {{personajeSolo.originPlanet.name}} </p>
+  
+          </div>
+
+        </div>
       </div>
 
-      <div>
-        <p class="encabezadoDatos">Ki</p>
-        <p class="datosFinal"> {{personajeSolo.ki}} </p>   
-      </div>
-
-      <div>
-        <p class="encabezadoDatos">maximo Ki</p>
-        <p class="datosFinal"> {{dato.maxKi}} </p>
-      </div>
-
-      <div>
-        <p class="encabezadoDatos">Raza</p>
-        <p class="datosFinal"> {{dato.race}} </p>
-      </div>
-
-      <div>
-        <p class="encabezadoDatos">sexo</p>
-        <p class="datosFinal"> {{dato.gender}} </p>
-      </div>
-
-      <div>
+      <div class="decripcionIndividual">
         <p class="encabezadoDatos">Descripcion</p>
         <p class="datosFinal"> {{dato.description}} </p>
       </div>
 
       <div>
-        <p class="encabezadoDatos">Planeta</p>
-        <p class="datosFinal"> {{personajeSolo.originPlanet.name}} </p>
-        <img class="imgPlaneta" src="{{personajeSolo.originPlanet.image}}" alt="{{personajeSolo.originPlanet.name}}"  [routerLink]="['/planetas', personajeSolo.originPlanet.id]">
+        <p class="encabezadoDatos">Visita mi planeta</p>
+        <img class="imgPlaneta" src="{{personajeSolo.originPlanet.image}}" alt="{{personajeSolo.originPlanet.name}}"
+          [routerLink]="['/planetas', personajeSolo.originPlanet.id]">
       </div>
     </div>
     <div class="botones">
@@ -48,4 +61,4 @@
       </div>
       <button class="btn btn-danger" (click)="resetear()">Personaje original</button>
     </div>
-</div>
+  </div>
