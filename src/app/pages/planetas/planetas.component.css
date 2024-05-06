@@ -69,8 +69,8 @@ input {
 }
 
   .planeta img {
-  width: 100%; /* la imagen ocupa el 100% del contenedor (planeta) */
-  height: auto;
+  width: 270px; /* la imagen ocupa el 100% del contenedor (planeta) */
+  height: 250px;
   transform: filter 0.3s;
 }
   .planeta:hover img {
@@ -78,7 +78,7 @@ input {
 }
 
 .nombrePlaneta {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: rgb(255, 0, 0);
   font-weight: 900;
   text-align: center; /* Centra el texto horizontalmente */
